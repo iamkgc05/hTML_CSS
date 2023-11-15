@@ -1,0 +1,469 @@
+:root {
+    --bleu: #00012c;
+    --beige: antiquewhite;
+    --purple: #9642d3;
+    --yellow: #d7bc1d;
+    --pastelpink: #e5989b;
+
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --bleu: #DFF8EB;
+        --beige: #A5ABAF;
+        --purple: #5A1F84;
+        --yellow: #4EA5D9;
+        --pastelpink: #A88FAC;
+
+    }
+
+}
+
+body {
+    background: var(--beige);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.titre h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--purple);
+    text-decoration: underline;
+    text-decoration-color: var(--purple);
+}
+
+
+/* Partie moi */
+
+.img {
+    height: inherit;
+    border-radius: 50px;
+}
+
+
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    /* grid-template-rows: repeat(1, 1fr); */
+}
+
+@media (min-width:50px) {
+    .section {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        position: relative;
+    }
+
+}
+
+@media(min-width:768px) {
+    .section {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        position: relative;
+    }
+
+}
+
+@media(min-width:992px) {
+    .section {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        position: relative;
+    }
+
+}
+
+.information {
+    position: absolute;
+    width: inherit;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    color: var(--beige);
+    background: var(--bleu);
+    border: 3px solid var(--purple);
+    border-radius: 50px;
+    opacity: 0;
+    padding: 3vh;
+    transition: all 1s ease-in-out 100ms;
+}
+
+.article:hover>.information {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    height: 33vh;
+}
+
+
+/* partie Experience */
+
+
+/* bar de niveaux exp */
+.bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progression {
+    background-color: bisque;
+    color: var(--beige);
+    border-radius: 50px;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    position: center;
+}
+
+.progrebar {
+    background-color: var(--bleu);
+    color: var(--beige);
+    padding: 1rem;
+    text-align: right;
+    font-size: 20px;
+    border-radius: 50px;
+
+}
+
+.progrebar[title="violet"] {
+    background-color: var(--purple);
+}
+
+.progrebar[title="jaune"] {
+    background-color: var(--yellow);
+}
+
+.un,
+.deux {
+    width: 60%
+}
+
+.trois {
+    width: 80%;
+}
+
+.quatre {
+    width: 70%;
+}
+
+#cap p {
+    font-size: larger;
+}
+
+.purple {
+    color: var(--purple);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+/* animation */
+.animation {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 100px 20px 0;
+}
+
+.animation p {
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--bleu);
+    color: transparent;
+}
+
+.animation p span {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-size: clamp(20px, 8vw, 45px);
+
+}
+
+.animation p span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.animation p:nth-child(1) {
+    font-weight: 300;
+    animation: apparition1 0s 1s forwards;
+}
+
+.animation p:nth-child(2) {
+    animation: apparition2 0s 1.25s forwards;
+}
+
+.animation p:nth-child(1) span::after {
+    background: var(--bleu);
+    animation: entree 0.75s ease-out forwards, sortie 0.75s 1s ease-out forwards;
+}
+
+.animation p:nth-child(2) span::after {
+    background: var(--purple);
+    animation: entree 0.75s 0.3s ease-out forwards, sortie 0.75s 1.3s ease-out forwards;
+}
+
+@keyframes entree {
+    100% {
+        transform: translateX(0%);
+    }
+
+
+}
+
+@keyframes sortie {
+    100% {
+        transform: translateX(100%)
+    }
+
+}
+
+@keyframes apparition1 {
+    100% {
+        color: var(--bleu)
+    }
+}
+
+@keyframes apparition2 {
+    100% {
+        color: var(--purple)
+    }
+
+}
+
+
+
+/* barre de navigation */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: bisque
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    padding: 10px 0;
+    height: 60px;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 30px;
+    position: relative;
+}
+
+nav a {
+    color: var(--bleu);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--purple);
+    transition: .5s;
+
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 300ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+@media (max-width:768px) {
+    .header {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+    }
+}
+
+/* Partie Contact */
+#contact {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+}
+
+.contien_contact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+
+}
+
+.contien_contact::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url(fond_contact.jpg) no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(5px);
+
+}
+
+.contact-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--purple);
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+
+.left {
+    height: 100%;
+    background: url(fond_contact.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.right {
+    padding: 25px 40px;
+}
+
+h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: var(--pastelpink);
+
+}
+
+.field {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid var(--pastelpink);
+    background-color: var(--beige);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.field:hover {
+    background-color: ghostwhite;
+}
+
+.field:focus {
+    background-color: var(--beige);
+    border: 2px solid var(--pastelpink);
+}
+
+.area {
+    min-height: 150px;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: ghostwhite;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.btn:hover {
+    background-color: wheat;
+}
+
+
+
+/* Media Queries */
+/* Je n'ai pas bien réalisé cette partie, mon footer disparait derriere ma boîte de contact. */
+@media screen and (max-width:768px) {
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        height: 0;
+    }
+}

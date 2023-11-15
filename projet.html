@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OKINDA</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div>
+            <img src="jojo.png" alt="logo" class="logo" />
+          </div>
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#me">About me</a></li>
+            <li><a href="#exp">Mes Expériences</a></li>
+            <li><a href="#cap">Mes Capacités</a></li>
+            <li><a href="#contact">Une remarque?</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="animation" id="top">
+        <p>
+          <span>Bonjour et bienvenue à JojoLands</span>
+        </p>
+        <p>
+          <span>Je vais commencer par me présenter</span>
+        </p>
+      </div>
+      <div class="titre" id="me">
+        <h1>Qui suis-je?</h1>
+        <div class="section">
+          <div class="article">
+            <img
+              src="gabon2.jpg"
+              alt="Un perroquet gris du Gabon."
+              class="img"
+            />
+
+            <div class="information">
+              Je m'appelle OKINDA Carlos Emmanuel, je suis né à Libreville au
+              Gabon et j'ai 17 ans. Je suis également d'origine Béninoise(de ma
+              mère) et Cap-verdienne(de mon père). Je réside à Lille en ce
+              moment. Je suis étudiant à l'université catholique de Lille en
+              Licence Science du Numérique.
+            </div>
+          </div>
+          <div class="article">
+            <img
+              src="basket3.jpg"
+              alt="Terrain de basket au crepuscule"
+              class="img"
+            />
+
+            <div class="information">
+              Je suis un fan inconditionel du basket, c'est un sport que
+              j'affectionne et que je pratique depuis plusieurs années. PS: Mon
+              joueur préféré est Stephen Curry.
+            </div>
+          </div>
+          <div class="article">
+            <img
+              src="JjbaRE.png"
+              alt="Jotaro Kujo, héros de la partie 3 de Jojo bizarre adventure."
+              class="img"
+            />
+
+            <div class="information">
+              J'apprécie aussi énormément la culture Nippone. J'ai grandis avec
+              les mangas, les animés et les jeux vidéos venant du Japon. Elle
+              fait donc partie à part entière de ma culture personnelle.
+            </div>
+          </div>
+        </div>
+        <p class="retour"><a href="#top">Haut de la page</a></p>
+      </div>
+      <div class="titre" id="exp">
+        <h1>Mes Expériences</h1>
+        <div class="section">
+          <div class="article">
+            <img
+              src="dio_enfant.jpg"
+              alt="Dio brando adolescent, antagoniste principale de Jojo bizarre adventure"
+              class="img"
+            />
+
+            <div class="information">
+              J'ai obtenu mon baccalauréat avec mention bien au luycée Français
+              de Libreville: Blaise Pascal.
+            </div>
+          </div>
+          <div class="article">
+            <img
+              src="polytechnique_montréal.jpg"
+              alt="Polytechnique de Mopntréal au Canada"
+              class="img"
+            />
+
+            <div class="information">
+              Durant l'année universitaire 2021-2022, j'ai été accépté à
+              polytechnique de Montréal. J'y ai réalisé un semestre mais pour
+              des raisons personnelles j'ai du changer d'établissement.
+            </div>
+          </div>
+          <div class="article">
+            <img
+              src="catho_lille.jpg"
+              alt="Université Catholique de Lille, Hôtel académique."
+              class="img"
+            />
+
+            <div class="information">
+              Pour l'année universitaire 2022-2023, j'ai été accépter en
+              première année à l'université catholique de Lille en Licence
+              Science du Numérique.
+            </div>
+          </div>
+        </div>
+        <p class="retour"><a href="#top">Haut de la page</a></p>
+      </div>
+      <div class="titre" id="cap">
+        <h1>Mes capacités</h1>
+        <!-- container -->
+        <div class="bar">
+          <!-- html -->
+          <p class="purple">Html</p>
+          <div class="progression">
+            <div title="jaune" class="progrebar un">60%</div>
+          </div>
+
+          <!-- css -->
+          <p class="yellow">Css</p>
+          <div class="progression">
+            <div title="violet" class="progrebar deux">60%</div>
+          </div>
+
+          <!-- python -->
+          <p class="purple">Python</p>
+          <div class="progression">
+            <div title="jaune" class="progrebar trois">80%</div>
+          </div>
+
+          <!-- sql -->
+          <p class="yellow">Sql</p>
+          <div class="progression">
+            <div title="violet" class="progrebar quatre">70%</div>
+          </div>
+        </div>
+      </div>
+      <form class="titre" id="contact" onsubmit="validate(event)">
+        <h1>Contact Me</h1>
+        <div class="contien_contact">
+          <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+              <h2>Contactez-moi</h2>
+              <label for="contact_nom"></label>
+              <input
+                id="contact_nom"
+                type="text"
+                class="field"
+                placeholder="Votre Nom"
+                minlength="0"
+                maxlength="25"
+                required
+              />
+              <label for="contact_mail"></label>
+              <input
+                id="contact_mail"
+                type="email"
+                class="field"
+                placeholder="Votre adresse e-mail"
+                required
+              />
+              <label for="contact_tel"></label>
+              <input
+                id="contact_tel"
+                type="tel"
+                class="field"
+                placeholder="Votre Numéro: 00-00-00-00-00"
+              />
+              <label for="contact_text"></label>
+              <textarea
+                id="contact_text"
+                class="field area"
+                placeholder="Une question? Une remarque? experimez-vous!"
+              ></textarea>
+              <button type="submit" class="btn">Envoyer</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <script>
+        function validate(e) {
+          e.preventDefault();
+          const formData = new FormData(e.target);
+
+          for (var [key, value] of formData.entries()) {
+            console.log(`${key}: ${value.type ? value.name : value}`);
+          }
+        }
+      </script>
+    </main>
+    <footer>
+      <p>Fait et imaginé par OKINDA Carlos (c)</p>
+    </footer>
+  </body>
+</html>
